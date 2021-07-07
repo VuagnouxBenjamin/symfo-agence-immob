@@ -19,12 +19,11 @@ class Properties
      */
     private $id;
 
-    private $heat_types = [
-        1 => 'Electrique',
+    public $heat_types = [
+        1 => 'Electric',
         2 => 'Gaz',
-        3 => 'Bois',
-        4 => 'Solaire',
-        5 => 'Pompe à chaleur'
+        3 => 'Wood',
+        4 => 'Solar'
         ];
 
     /**

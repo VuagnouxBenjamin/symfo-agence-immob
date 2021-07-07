@@ -10,7 +10,7 @@
 
     <div class="container">
         <h2 class="text-center">Les derniers biens</h2>
-        <div class="row flex">
+        <div class="row flex mt-4">
             {% for property in properties %}
                 <div class="col-3">
                     <div class="card">
@@ -18,7 +18,7 @@
                             <h5 class="cart-title">
                                 <a href="{{ path('property.show', {slug: property.slug, id: property.id}) }}">{{ property.title }}</a>
                             </h5>
-                            <p class="card-text">{{ property.adress }} ({{ property.postalCode }})</p>
+                            <p class="card-text">{{ property.city }} ({{ property.postalCode }})</p>
                             <div class="text-primary fw-bold" style="font-weight:bold;font-size: 2rem;">{{ property.formattedPrice }} €</div>
                         </div>
                     </div>

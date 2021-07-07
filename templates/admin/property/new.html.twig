@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Ajouter un bien - agence Lorem Ipsum' %}
+
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Ajouter un bien : </h1>
+    </div>
+
+    <div class="container mt-4">
+
+        {{ include ('admin/property/_form.html.twig', {button: 'Ajouter'}) }}
+
+    </div>
+
+{% endblock %}
