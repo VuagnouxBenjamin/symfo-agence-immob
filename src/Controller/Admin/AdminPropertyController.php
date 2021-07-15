@@ -67,7 +67,6 @@ class AdminPropertyController extends AbstractController {
 
     }
 
-
     /**
      * @Route("/admin/property/edit/{id}", name="admin.property.edit", methods="GET|POST")
      */

@@ -6,9 +6,12 @@ use App\Repository\PropertiesRepository;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=PropertiesRepository::class)
+ * @UniqueEntity("title")
  */
 class Properties
 {
@@ -28,6 +31,10 @@ class Properties
 
     /**
      * @ORM\Column(type="string", length=40)
+     * @Assert\Length(
+     *      min = 5,
+     *      max = 50
+     * )
      */
     private $title;
 
@@ -38,6 +45,7 @@ class Properties
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min=5, max=1000)
      */
     private $surface;
 
@@ -78,6 +86,11 @@ class Properties
 
     /**
      * @ORM\Column(type="string", length=5)
+     * @Assert\Regex(
+     *     pattern="/^[0-9]{5}$/",
+     *     match=true,
+     *     message="Veuillez entrer un Code Postal de 5 chiffres"
+     * )
      */
     private $postal_code;
 
