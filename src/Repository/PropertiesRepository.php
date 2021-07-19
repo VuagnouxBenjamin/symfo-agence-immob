@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Properties;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Query;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -28,6 +29,16 @@ class PropertiesRepository extends ServiceEntityRepository
             ->andWhere('p.sold = false')
             ->getQuery()
             ->getResult();
+    }
+
+    /**
+     * @return Query
+     */
+    public function findAllVisibleQuery(): Query
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.sold = false')
+            ->getQuery();
     }
 
     public function findLatest(): array

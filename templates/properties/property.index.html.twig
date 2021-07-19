@@ -9,13 +9,22 @@
     </div>
 
         <div class="container mt-4">
+
+            {# Display cards with items #}
             <div class="row flex mt-4">
-                {% for property in properties %}
+                {% for property in pagination %}
                     <div class="col-md-4 mb-2">
                         {% include 'properties/_property.card.html.twig' %}
                     </div>
                 {% endfor %}
             </div>
+
+            {# display navigation #}
+            <div class="navigation mt-4">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+
         </div>
+
 
 {% endblock %}
