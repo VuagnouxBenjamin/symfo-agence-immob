@@ -8,4 +8,14 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum error, illo incidunt neque nihil odit tempore! Consequuntur, neque nesciunt nisi obcaecati quae quam quia saepe tempore, tenetur voluptas voluptatibus.</p>
     </div>
 
+        <div class="container mt-4">
+            <div class="row flex mt-4">
+                {% for property in properties %}
+                    <div class="col-md-4 mb-2">
+                        {% include 'properties/_property.card.html.twig' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
 {% endblock %}

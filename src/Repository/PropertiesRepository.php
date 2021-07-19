@@ -34,7 +34,7 @@ class PropertiesRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.sold = false')
-            ->setMaxResults(10)
+            ->setMaxResults(4)
             ->getQuery()
             ->getResult();
     }
