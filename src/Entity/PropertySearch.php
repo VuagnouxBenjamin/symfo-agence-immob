@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class PropertySearch {
     /**
      * @return int|null
@@ -41,11 +43,23 @@ class PropertySearch {
 
     /**
      * @var int|null
+     * @Assert\Range(
+     *     min = 10,
+     *     max = 400,
+     *     minMessage="Veuillez entrer une valeur suppérieure à 10 m²",
+     *     maxMessage="Veuillez entrer une valeur inférieure à 400 m2"
+     * )
      */
     private $minSurface;
 
     /**
      * @var int|null
+     * @Assert\Range(
+     *     min = 70000,
+     *     max = 1000000,
+     *     minMessage="Veuillez entrer une valeur suppérieure à 70 000 €",
+     *     maxMessage="Veuillez entrer une valeur inférieure à 1 000 000 €"
+     * )
      */
     private $maxPrice;
 
