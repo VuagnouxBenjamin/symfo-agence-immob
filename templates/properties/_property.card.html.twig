@@ -5,8 +5,7 @@
                 <a class="" href="{{ path('property.show', {slug: property.slug, id: property.id}) }}">{{ property.title | upper | u.truncate(20)}}</a>
             </h5>
             <p>{{ property.description | u.truncate(100)}}</p>
-            <p class="card-text">{{ property.city }} ({{ property.postalCode }})</p>
-            <p class="card-text">{{ property.surface }} m²</p>
+            <p class="card-text">{{ property.surface }} m² - {{ property.city }} ({{ property.postalCode }})</p>
             <div class="text-primary fw-bold" style="font-weight:bold;font-size: 2rem;">{{ property.formattedPrice }} €</div>
         </div>
     </div>
