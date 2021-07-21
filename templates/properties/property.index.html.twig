@@ -6,6 +6,21 @@
     <div class="jumbotron text-center">
         <h1>Voir tous nos biens</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum error, illo incidunt neque nihil odit tempore! Consequuntur, neque nesciunt nisi obcaecati quae quam quia saepe tempore, tenetur voluptas voluptatibus.</p>
+        {{ form_start(searchForm) }}
+        <div class="d-flex justify-content-center mt-2">
+            <div class="mx-2">
+                {{ form_row(searchForm.minSurface) }}
+            </div>
+            <div class="mx-2">
+                {{ form_row(searchForm.maxPrice) }}
+            </div>
+            <div class="mx-2">
+                <button class="btn btn-primary">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+        {{ form_end(searchForm) }}
     </div>
 
         <div class="container mt-4">

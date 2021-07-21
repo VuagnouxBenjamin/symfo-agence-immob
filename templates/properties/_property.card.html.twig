@@ -6,6 +6,7 @@
             </h5>
             <p>{{ property.description | u.truncate(100)}}</p>
             <p class="card-text">{{ property.city }} ({{ property.postalCode }})</p>
+            <p class="card-text">{{ property.surface }} m²</p>
             <div class="text-primary fw-bold" style="font-weight:bold;font-size: 2rem;">{{ property.formattedPrice }} €</div>
         </div>
     </div>
