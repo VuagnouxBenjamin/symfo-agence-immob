@@ -2,22 +2,26 @@
 
 {% block title property.title ~ ' - Agence Lorem Ipsum'%}
 
-{% block body %}
+{% block jumbo %}
     <div class="jumbotron">
-        <div class="row">
-            <div class="col-md-8">
+    <div class="row">
+        <div class="col-md-8">
 
-                {# Espace libre #}
+            {# Espace libre #}
 
-            </div>
-            <div class="col-md-4">
-                <h1>{{ property.title }}</h1>
-                <h2>{{ property.rooms }} pièces, {{ property.surface }} m²</h2>
-                <div class="text-primary" style="font-size: 4rem; font-weight:bold;">{{ property.formattedPrice }} €</div>
-                <a href="#" class="btn btn-primary">Contacter l'agence</a>
-            </div>
+        </div>
+        <div class="col-md-4">
+            <h1>{{ property.title }}</h1>
+            <h2>{{ property.rooms }} pièces, {{ property.surface }} m²</h2>
+            <div class="text-primary" style="font-size: 4rem; font-weight:bold;">{{ property.formattedPrice }} €</div>
+            <a href="#" class="btn btn-primary">Contacter l'agence</a>
         </div>
     </div>
+</div>
+{% endblock %}
+
+{% block body %}
+
     <div class="container">
 
         <h2>Description</h2>
