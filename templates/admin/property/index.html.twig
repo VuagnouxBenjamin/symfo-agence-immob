@@ -2,11 +2,13 @@
 
 {% block title 'Administration - agence Lorem Ipsum' %}
 
-{% block body %}
+{% block jumbo %}
     <div class="jumbotron text-center">
         <h1>Gérer les biens</h1>
     </div>
+{% endblock %}
 
+{% block body %}
     <div class="container mt-4">
 
         {% for message in app.flashes('success') %}
